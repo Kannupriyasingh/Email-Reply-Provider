@@ -16,7 +16,9 @@ function App() {
     setLoading(true)
     setError('')
     try {
-      const response = await axios.post("http://localhost:8080/api/email/generate", {
+      // https://email-reply-generator-production.up.railway.app/api/email/generate (live/production)
+      // http://localhost:8080/api/email/generate (local)
+      const response = await axios.post("https://email-reply-generator-production.up.railway.app/api/email/generate", {
         emailContent,
         tone
       });
